@@ -1,0 +1,247 @@
+/* BookingCard Component Styles */
+.booking-card-wrapper {
+  position: sticky;
+  top: 100px;
+  width: 100%;
+}
+
+.booking-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.price-display {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.price-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.original-price {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.price-unit {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.header-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Date & Guest Input Matrix */
+.booking-picker-box {
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.dates-grid-picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border-medium);
+}
+
+.picker-cell {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.picker-cell:first-child {
+  border-right: 1px solid var(--border-medium);
+}
+
+.picker-cell:hover {
+  background-color: var(--background);
+}
+
+.picker-label {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+}
+
+.picker-value {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.guest-cell {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guest-cell:hover {
+  background-color: var(--background);
+}
+
+/* Guest Selector Dropdown Popover */
+.guest-popover {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 16px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: slideUp 0.15s ease-out;
+}
+
+.guest-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guest-row-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.guest-row-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast);
+}
+
+.counter-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.counter-btn:not(:disabled):hover {
+  border-color: var(--text-primary);
+}
+
+/* Reserve Action Button */
+.reserve-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, hsl(350, 100%, 61%), hsl(340, 95%, 52%));
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(255, 56, 92, 0.3);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.reserve-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 56, 92, 0.4);
+}
+
+.charge-note {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+/* Price Calculation Breakdown */
+.pricing-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+}
+
+.breakdown-row.underline-item span:first-child {
+  text-decoration: underline;
+}
+
+.breakdown-divider {
+  height: 1px;
+  background-color: var(--border-light);
+  margin: 4px 0;
+}
+
+.breakdown-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* Date Picker Popover */
+.date-picker-popover {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 16px;
+  z-index: 10;
+  animation: slideUp 0.15s ease-out;
+}

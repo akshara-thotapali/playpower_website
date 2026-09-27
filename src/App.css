@@ -1,0 +1,82 @@
+/* App Layout Styles */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Two-column layout grid for desktop */
+.property-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 80px;
+  align-items: start;
+  margin-top: 12px;
+}
+
+.property-left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Reviews Summary Section */
+.reviews-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-light);
+  id: reviews;
+}
+
+.reviews-header-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-user-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-user-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.review-comment {
+  font-size: 0.925rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}

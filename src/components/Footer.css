@@ -1,0 +1,66 @@
+/* Footer Component Styles */
+.site-footer {
+  background-color: var(--background);
+  border-top: 1px solid var(--border-light);
+  margin-top: 64px;
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+.footer-columns-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.footer-column h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-column ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-column a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-links-inline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

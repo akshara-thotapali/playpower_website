@@ -1,0 +1,104 @@
+/* PropertyHeader Component Styles */
+.property-header-section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.property-title-h1 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.property-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.property-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.9375rem;
+}
+
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.star-icon {
+  fill: var(--primary);
+  color: var(--primary);
+}
+
+.review-link {
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--text-primary);
+}
+
+.dot-separator {
+  color: var(--text-tertiary);
+  font-size: 0.8rem;
+}
+
+.location-link {
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--text-primary);
+}
+
+.property-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: background-color var(--transition-fast);
+}
+
+.action-btn:hover {
+  background-color: var(--background);
+  text-decoration: underline;
+}
+
+.heart-active {
+  fill: var(--primary);
+  color: var(--primary) !important;
+}
+
+/* Toast alert notification */
+.toast-notification {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--text-primary);
+  color: var(--surface);
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-lg);
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-out;
+}

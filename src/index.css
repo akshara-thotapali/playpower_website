@@ -1,0 +1,148 @@
+/* Design System & Reset for HavenScape Vacation Rental */
+
+:root {
+  /* Color Palette - HSL Derived Premium Palette */
+  --primary: hsl(350, 100%, 61%);          /* #FF385C HavenScape Coral */
+  --primary-hover: hsl(350, 100%, 54%);    /* Darker Coral */
+  --primary-light: hsl(350, 100%, 96%);    /* Soft Pink tint */
+  
+  --surface: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 98%);
+  
+  --text-primary: hsl(220, 20%, 14%);      /* #1e242b Deep Ink */
+  --text-secondary: hsl(220, 10%, 42%);    /* Muted Slate */
+  --text-tertiary: hsl(220, 10%, 60%);     /* Subtle Grey */
+  
+  --border-light: hsl(220, 14%, 90%);      /* #E2E8F0 */
+  --border-medium: hsl(220, 14%, 82%);     /* #CBD5E1 */
+  
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.12);
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background-color: var(--surface);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body.scroll-locked {
+  overflow: hidden !important;
+}
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Shared Container Layout */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Generic Overlay Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp var(--transition-smooth) forwards;
+}
+
+/* Modal Backdrops */
+.overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Badge Styling */
+.badge-favorite {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, hsl(350, 100%, 96%), hsl(350, 100%, 92%));
+  border: 1px solid rgba(255, 56, 92, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+}

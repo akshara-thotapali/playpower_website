@@ -1,0 +1,180 @@
+/* PropertyDetails Component Styles */
+.property-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.host-specs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.host-specs-info h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.specs-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.host-avatar-ring {
+  position: relative;
+}
+
+.host-avatar-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.superhost-badge-dot {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--surface);
+}
+
+/* Feature Highlights List */
+.highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.highlight-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.highlight-icon-box {
+  color: var(--text-primary);
+  padding-top: 2px;
+}
+
+.highlight-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.highlight-content p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* Protection Guarantee Banner */
+.protection-banner {
+  padding: 24px;
+  background-color: var(--background);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.protection-banner h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.protection-banner h3 span {
+  color: var(--primary);
+}
+
+.protection-banner p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Description Text Section */
+.description-section {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.description-text {
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.65;
+  white-space: pre-line;
+}
+
+.description-text.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.show-more-btn {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  color: var(--text-primary);
+}
+
+.show-more-btn:hover {
+  color: var(--primary);
+}
+
+/* Bedroom Cards Grid */
+.sleeping-arrangements-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.beds-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.bed-card {
+  padding: 20px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bed-card h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.bed-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}

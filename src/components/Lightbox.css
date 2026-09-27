@@ -1,0 +1,121 @@
+/* Lightbox Component Styles */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #0b0f17;
+  color: #ffffff;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn 0.2s ease-out;
+  user-select: none;
+}
+
+.lightbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  z-index: 10;
+}
+
+.lightbox-counter {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.lightbox-close-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color var(--transition-fast);
+}
+
+.lightbox-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-stage {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  overflow: hidden;
+}
+
+.lightbox-img-wrapper {
+  max-width: 100%;
+  max-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-active-img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  z-index: 10;
+}
+
+.lightbox-nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.lightbox-nav-btn.prev {
+  left: 24px;
+}
+
+.lightbox-nav-btn.next {
+  right: 24px;
+}
+
+.lightbox-footer {
+  padding: 20px 32px;
+  text-align: center;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  z-index: 10;
+}
+
+.lightbox-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.lightbox-category {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}

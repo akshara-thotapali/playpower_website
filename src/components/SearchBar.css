@@ -1,0 +1,110 @@
+/* SearchBar Component Styles */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  padding: 8px 8px 8px 16px;
+  box-shadow: var(--shadow-sm);
+  background-color: var(--surface);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+  cursor: pointer;
+  gap: 12px;
+}
+
+.search-bar-container:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
+}
+
+.search-segment {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast);
+}
+
+.search-segment.muted {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.search-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-light);
+}
+
+.search-submit-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.search-submit-btn:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+/* Modal Search Overlay */
+.search-modal-card {
+  background-color: var(--surface);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 680px;
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-inputs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.input-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-field-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.search-input {
+  padding: 12px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+}
